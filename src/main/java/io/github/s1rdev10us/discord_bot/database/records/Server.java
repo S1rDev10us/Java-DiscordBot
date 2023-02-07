@@ -1,4 +1,6 @@
 package io.github.s1rdev10us.discord_bot.database.records;
 
-public class Server {
+import java.io.Serializable;
+
+public record Server() implements Serializable {
 }
