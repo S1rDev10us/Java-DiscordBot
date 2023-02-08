@@ -1,4 +1,4 @@
-package io.github.s1rdev10us.discord_bot;
+package io.github.s1rdev10us.discord_bot.utils;
 
 import io.github.s1rdev10us.discord_bot.utils.EventListenerFactory;
 import net.dv8tion.jda.api.events.Event;

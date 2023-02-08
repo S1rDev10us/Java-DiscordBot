@@ -1,6 +1,7 @@
 package io.github.s1rdev10us.discord_bot;
 
 import io.github.s1rdev10us.discord_bot.database.Database;
+import io.github.s1rdev10us.discord_bot.utils.EventContainer;
 import io.github.s1rdev10us.discord_bot.utils.EventListenerFactory;
 import net.dv8tion.jda.api.events.interaction.SlashCommandEvent;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
