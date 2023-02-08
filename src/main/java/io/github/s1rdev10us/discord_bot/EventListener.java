@@ -27,7 +27,7 @@ public class EventListener extends ListenerAdapter {
 	
 	@Override
 	public void onMessageReceived(@NotNull MessageReceivedEvent event) {
-		String originalMessageString=event.getMessage().toString();
+		String originalMessageString = event.getMessage().toString();
 		if (!originalMessageString.startsWith(Main.DATABASE.prefix())) return;
 		if (originalMessageString.length() <= Main.DATABASE.prefix().length()) return;
 		if (event.getAuthor().isBot()) return;
@@ -38,7 +38,7 @@ public class EventListener extends ListenerAdapter {
 		
 		EventListenerFactory<MessageReceivedEvent> messageCommandEventListener = eventContainer.getEvent(MessageReceivedEvent.class, eventName);
 		if (messageCommandEventListener != null) {
-			messageCommandEventListener.execute(event,database,LOGGER);
+			messageCommandEventListener.execute(event, database, LOGGER);
 		}
 		
 	}

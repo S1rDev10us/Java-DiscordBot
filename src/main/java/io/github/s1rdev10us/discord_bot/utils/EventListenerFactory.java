@@ -7,6 +7,8 @@ import javax.annotation.Nonnull;
 import java.util.logging.Logger;
 
 public class EventListenerFactory<E> {
-	public String eventName="";
-	public void execute(@Nonnull E event, Database database, Logger logger){}
+	public String eventName = "";
+	
+	public void execute(@Nonnull E event, Database database, Logger logger) {
+	}
 }
