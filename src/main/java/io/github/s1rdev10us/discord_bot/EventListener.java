@@ -38,7 +38,7 @@ public class EventListener extends ListenerAdapter {
 		
 		EventListenerFactory<MessageReceivedEvent> messageCommandEventListener = eventContainer.getEvent(MessageReceivedEvent.class, eventName);
 		if (messageCommandEventListener != null) {
-			messageCommandEventListener.execute(event);
+			messageCommandEventListener.execute(event,database,LOGGER);
 		}
 		
 	}

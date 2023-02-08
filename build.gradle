@@ -11,7 +11,7 @@ version '1.0-SNAPSHOT'
 
 processResources{
     def events = ""
-    def eventListeners = ""
+//    def eventListeners = ""
 
     fileTree("src/main/java/io/github/s1rdev10us/discord_bot/events").visit({ FileVisitDetails details ->
         if (details.isDirectory()) return
@@ -25,20 +25,22 @@ processResources{
 
 
 
-    fileTree("src/main/java/io/github/s1rdev10us/discord_bot/utils/event_listeners").visit({ FileVisitDetails details ->
-        if (details.isDirectory()) return
-        def eventListener = details.file.path.toString().replaceAll("\\\\", ".").replaceAll("/", ".").split("src\\.main\\.java\\.")[1].replace(".java", "") + ","
-        println eventListener
-        events += eventListener
-    })
-    println eventListeners.toString()
+//    fileTree("src/main/java/io/github/s1rdev10us/discord_bot/utils/event_listeners").visit({ FileVisitDetails details ->
+//        if (details.isDirectory()) return
+//        def eventListener = details.file.path.toString().replaceAll("\\\\", ".").replaceAll("/", ".").split("src\\.main\\.java\\.")[1].replace(".java", "") + ","
+//        println eventListener
+//        events += eventListener
+//    })
+//    println eventListeners.toString()
 
 
 
 
-    filesMatching("processedData.json") {
-        expand "eventListeners": eventListeners.toString(),"events":events.toString()
-
+//    filesMatching("processedData.json") {
+//        expand "eventListeners": eventListeners.toString()
+//    }
+    filesMatching("processedData.json"){
+        expand "events":events.toString()
     }
 }
 
